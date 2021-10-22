@@ -22,14 +22,22 @@ Customer: when navigating a flow, viewing orders and jobs, and interacting with 
 
 - Stop api calls that run at regular intervals
 
-- Reduce api calls with frontend caching techniques
+- Reduce volume of api calls with frontend caching techniques
 
-- Optimize naive sql queries to more efficiently utilize permanent data stores
+- Optimize unnecessary and inefficient SQL queries to improve permanent data store performance
 
-- Add additional data layers to increase data efficiency (no-sql data stores, RAM caching for frequently requested data)
+- Add additional data layers to increase data efficiency and performance (no-sql data stores, RAM caching for frequently requested data)
+
+- Misconfigured tooling causing unnecessary overhead and reducing page performance
 
 ## Next Steps
 
 - Tightly coupled monolithic code base: recommend we utilize the Austin team in order to progressively work to decouple the tightly coupled backend architecture from the frontend by peeling off small pieces of functionality over time into maintainable greenfield applications. Simultaneously keeping the Allion engineers (familiar with the current monolith) to progress on features within the current architecture. We can then progressively move more resources from old to the new over time to prevent loss of app feature productivity for business objectives.
 
-- Polling architecture: recommend re-architecting approach to real time events with a push based event system rather than a polling system to decrease exponential overhead of polling architecture.
+- Polling architecture: recommend re-architecting approach to real time events with a push based event system rather than a polling system to eliminate exponential overhead of polling architecture.
+
+- SQL: recommend we strategically identify and re-write inefficient SQL queries to ensure the data stores are not over-saturated by unnecessary and inefficient queries.
+
+- Data layers: recommend we research and implement one or more additional data layers to assist frontend application performant consumption of permanent data stores.
+
+- Configuration: recommend we research and strategically remove under-utilized tooling while optimizing the configuration of those that remain
