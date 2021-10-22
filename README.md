@@ -36,6 +36,8 @@ Customer: when navigating a flow, viewing orders and jobs, and interacting with 
 
 - Polling architecture: recommend re-architecting approach to real time events with a push based event system rather than a polling system to eliminate exponential overhead of polling architecture.
 
+- API volume: recommend we strategically combine API calls to reduce volume while refactoring to utilize data layers.
+
 - SQL: recommend we strategically identify and re-write inefficient SQL queries to ensure the data stores are not over-saturated by unnecessary and inefficient queries.
 
 - Data layers: recommend we research and implement one or more additional data layers to assist frontend application performant consumption of permanent data stores.
